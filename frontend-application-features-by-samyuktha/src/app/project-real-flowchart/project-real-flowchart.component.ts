@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AddProjectComponent} from '../add-project/add-project.component';
-import {MatDialog} from '@angular/material/dialog';
+
 
 
 @Component({
@@ -10,10 +9,8 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class ProjectRealFlowchartComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
-  addProject() {
-    this.dialog.open(AddProjectComponent)
-  }
+  constructor() { }
+
   ngOnInit(): void {
   }
 
