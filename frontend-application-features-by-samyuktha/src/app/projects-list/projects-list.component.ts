@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {DataService} from '../services/data.service';
 import {  MatTableDataSource} from '@angular/material/table';
 import {  MatPaginator} from '@angular/material/paginator';
+import {AddProjectComponent} from '../add-project/add-project.component';
 
 
 
@@ -34,11 +35,12 @@ export class ProjectsListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private service : ProjectService, private route: ActivatedRoute,private router: Router) {
+  constructor(public dialog: MatDialog, private service : ProjectService, private route: ActivatedRoute,private router: Router) {
 
   }
-
-
+  addProject() {
+    this.dialog.open(AddProjectComponent)
+  }
 
 
   ngOnInit() {
